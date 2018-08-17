@@ -1,0 +1,251 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+article,aside,details,figcaption,figure,footer,header,hgroup,hr,menu,nav,section{display:block}a,hr{padding:0}abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:0 0}ins,mark{background-color:#ff9;color:#000}body{line-height:1}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{margin:0;font-size:100%;vertical-align:baseline;background:0 0}ins{text-decoration:none}mark{font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{height:1px;border:0;border-top:1px solid #ccc;margin:1em 0}input,select{vertical-align:middle}
+
+html {
+
+	overflow-y: scroll;
+	font-size: 1em;
+}
+
+body {
+
+	background: #121212 url('setup.jpg') center top no-repeat;
+	font-family: 'Open Sans', Arial, Helvetica;
+	font-size: 14px;
+	color: #FFFFFF;
+	/* background-size */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+a {
+
+	color: #22BAA0;
+	text-decoration: none;
+}
+
+a:hover {
+
+	color: #1A8F7B;
+	text-decoration: underline;
+}
+
+.inner {
+
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.boxfix-vert {
+
+	padding: 1px 0;
+}
+
+.margins {
+
+	margin: 15px;
+}
+
+.text-muted {
+
+	color: #888888;
+}
+
+.text-center {
+
+	text-align: center;
+}
+
+.the-content {
+
+	color: #FFFFFF;
+}
+
+p {
+
+	line-height: 1.5;
+	margin: 0 0 15px;
+}
+
+h1, h2, h3, h4 {
+
+	font-weight: inherit;
+	line-height: 1.2;
+	margin: 0 0 15px;
+}
+
+h1 { font-size: 2.074em; }
+h2 { font-size: 1.728em; }
+h3 { font-size: 1.440em; }
+h4 { font-size: 1.200em; }
+
+.metabox {
+
+	background: #1B1B1B;
+	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.075);
+	color: #565656;
+	margin-bottom: 15px;
+}
+
+.metabox .metabox-header {
+
+	border-bottom: 1px solid #232323;
+	color: #7C7C7C;
+	font-size: 11px;
+	font-weight: 700;
+	padding: 15px;
+	text-transform: uppercase;
+}
+
+.metabox .metabox-footer {
+
+	border-top: 1px solid #232323;
+	color: #7C7C7C;
+	font-size: 11px;
+	font-weight: 700;
+	padding: 15px;
+	text-transform: uppercase;
+}
+
+.metabox .metabox-body {
+
+	padding: 15px;
+}
+
+.metabox .metabox-body.body-simple {
+
+	padding: 0;
+}
+
+.metabox .metabox-body > *:last-child {
+
+	margin-bottom: 0;
+}
+
+.form-group {
+
+	margin-bottom: 10px;
+}
+
+.form-group .form-control {
+
+	line-height: normal;
+	vertical-align: middle;
+	-webkit-user-drag: none;
+	display: inline-block;
+	text-transform: none;
+	font-size: inherit;
+	font-family: inherit;
+	font-size: 100%;
+	vertical-align: middle;
+	background: #1b1b1b;
+	color: #FFFFFF;
+	border: 1px solid #323232;
+	padding: 0.429em;
+	font-weight: 300;
+	height: 2.4em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.form-group .input-block {
+
+	width: 100%;
+	display: block;
+}
+
+.form-group .control-label {
+
+	font-size: 0.95em;
+	color: #777777;
+	display: block;
+	margin-bottom: 5px;
+	-webkit-transition: border 0.35s, color 0.35s, background-color 0.35s;
+	-moz-transition: border 0.35s, color 0.35s, background-color 0.35s;
+	-ms-transition: border 0.35s, color 0.35s, background-color 0.35s;
+	-o-transition: border 0.35s, color 0.35s, background-color 0.35s;
+	transition: border 0.35s, color 0.35s, background-color 0.35s;
+}
+
+.form-group .control-label .required {
+
+	color: #CC0000;
+}
+
+.form-group.has-error .control-label {
+
+	color: #CC0000;
+}
+
+.form-group.has-error .form-control {
+
+	color: #CC0000;
+	border-color: #CC0000;
+}
+
+.button {
+
+	text-transform: none;
+	font-family: inherit;
+	font-size: 100%;
+	padding: 0.429em 1.2em;
+	color: #FFFFFF;
+	border: 1px solid #7F8C8D;
+	background-color: #7F8C8D;
+	text-decoration: none !important;
+	font-weight: 300;
+	min-height: 2.4em;
+	line-height: 1.542em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: border 0.25s, color 0.25s, background-color 0.25s;
+	-moz-transition: border 0.25s, color 0.25s, background-color 0.25s;
+	-ms-transition: border 0.25s, color 0.25s, background-color 0.25s;
+	-o-transition: border 0.25s, color 0.25s, background-color 0.25s;
+	transition: border 0.25s, color 0.25s, background-color 0.25s;
+	white-space: nowrap;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+.button.button-primary {
+
+	background: #22BAA0;
+	border-color: #22BAA0;
+	color: #FFFFFF;
+}
+
+.button.button-primary:hover {
+
+	background: #1A8F7B;
+	border-color: #1A8F7B;
+	color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+
+	.center-col {
+
+		width: 50%;
+		margin: 0 auto;
+	}
+}

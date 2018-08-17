@@ -1,0 +1,39 @@
+{
+	"description":"No description",
+	"strings":{
+		"name":"Attachments",
+		"singular":"Attachment",
+		"menu":"Attachments",
+		"all":"All Attachments",
+		"new":"Add Attachment",
+		"edit":"Edit Attachment",
+		"delete":"Delete Attachment",
+		"view":"View Attachment",
+		"search":"Search Attachment",
+		"empty":"No Attachments found",
+		"parent":"Parent Attachment"
+	},
+	"features":[
+		"media"
+	],
+	"taxonomies":[],
+	"flags":{
+		"hierarchical":false,
+		"public":true,
+		"export":true,
+		"archive":false,
+		"search":false,
+		"query":true
+	},
+	"admin":{
+		"show":true,
+		"position":-5,
+		"icon":"fa-picture-o"
+	},
+	"routing":{
+		"ignore":true,
+		"root":true,
+		"slug":"",
+		"paginate":true
+	}
+}

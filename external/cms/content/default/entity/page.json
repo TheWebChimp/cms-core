@@ -1,0 +1,42 @@
+{
+	"description":"No description",
+	"strings":{
+		"name":"Pages",
+		"singular":"Page",
+		"menu":"Pages",
+		"all":"All Pages",
+		"new":"Add Page",
+		"edit":"Edit Page",
+		"delete":"Delete Page",
+		"view":"View Page",
+		"search":"Search Page",
+		"empty":"No Pages found",
+		"parent":"Parent Page"
+	},
+	"features":[
+		"title",
+		"editor",
+		"excerpt",
+		"thumbnail"
+	],
+	"taxonomies":[],
+	"flags":{
+		"hierarchical":true,
+		"public":true,
+		"export":true,
+		"archive":false,
+		"search":true,
+		"query":true
+	},
+	"admin":{
+		"show":true,
+		"position":"0",
+		"icon":"fa-file"
+	},
+	"routing":{
+		"ignore":false,
+		"root":true,
+		"slug":"",
+		"paginate":true
+	}
+}

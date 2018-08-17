@@ -1,0 +1,46 @@
+{
+	"description":"No description",
+	"strings":{
+		"name":"Posts",
+		"singular":"Post",
+		"menu":"Posts",
+		"all":"All Posts",
+		"new":"Add Post",
+		"edit":"Edit Post",
+		"delete":"Delete Post",
+		"view":"View Post",
+		"search":"Search Post",
+		"empty":"No Posts found",
+		"parent":"Parent Post"
+	},
+	"features":[
+		"title",
+		"editor",
+		"author",
+		"excerpt",
+		"thumbnail",
+		"comments"
+	],
+	"taxonomies":[
+		"category"
+	],
+	"flags":{
+		"hierarchical":false,
+		"public":true,
+		"export":true,
+		"archive":true,
+		"search":true,
+		"query":true
+	},
+	"admin":{
+		"show":true,
+		"position":"0",
+		"icon":"fa-thumb-tack"
+	},
+	"routing":{
+		"ignore":false,
+		"root":false,
+		"slug":"posts",
+		"paginate":true
+	}
+}

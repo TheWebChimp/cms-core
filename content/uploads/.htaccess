@@ -1,0 +1,6 @@
+# Unregister PHP extension
+RemoveHandler .php .phtml .php3 .php4 .php5
+RemoveType .php .phtml .php3 .php4 .php5
+
+# Disable PHP execution
+php_flag engine off

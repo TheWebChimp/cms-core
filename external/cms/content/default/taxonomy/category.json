@@ -1,0 +1,31 @@
+{
+	"description":"No description",
+	"strings":{
+		"name":"Categories",
+		"singular":"Category",
+		"menu":"Categories",
+		"all":"All Categories",
+		"new":"Add Category",
+		"edit":"Edit Category",
+		"delete":"Delete Category",
+		"view":"View Category",
+		"search":"Search Category",
+		"empty":"No Categories found",
+		"parent":"Parent Category"
+	},
+	"entities":[
+		"post"
+	],
+	"flags":{
+		"hierarchical":true,
+		"public":true,
+		"export":true,
+		"archive":true,
+		"search":true,
+		"query":true
+	},
+	"routing":{
+		"ignore":false,
+		"slug":"categories"
+	}
+}

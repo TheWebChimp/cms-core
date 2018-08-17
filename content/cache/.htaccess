@@ -1,0 +1,5 @@
+# Prevent download of cache files
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteRule (.*)\.(cache)$ - [F,NC]
+</IfModule>
