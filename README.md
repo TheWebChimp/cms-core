@@ -7,9 +7,34 @@ CMS Platform for Hummingbird Lite
 
 - PHP 5.6+
 - Hummingbird Lite 3.0.1+ <[vecode.net/hummingbird](https://io.vecode.net/hummingbird/)>
+- NORM <[github.com/TheWebChimp/norm](https://github.com/TheWebChimp/norm)>
 - Parsedown <[github.com/erusev/parsedown](https://github.com/erusev/parsedown)>
 - PasswordHash <[openwall.com/phpass](http://www.openwall.com/phpass/)>
 - SimpleImage <[github.com/claviska/SimpleImage](https://github.com/claviska/SimpleImage)>
+
+## Installation
+
+First make sure you have all the required dependencies. If you don't meet a certain one, you'll be warned and the setup wizard will not let you continue until you add all the required files.
+
+For NORM you will need to add the Model class, from this gist: https://gist.github.com/biohzrdmx/db1f81c3f077cf0cfb2a28b9c10ae760.
+
+Include the required files on your `functions.inc.php file`, specifically:
+
+	include $site->baseDir('/external/model.inc.php');
+	include $site->baseDir('/external/norm.inc.php');
+	include $site->baseDir('/external/crood.inc.php');
+
+	include $site->baseDir('/external/lib/Parsedown.php');
+	include $site->baseDir('/external/lib/PasswordHash.php');
+	include $site->baseDir('/external/lib/SimpleImage.php');
+
+And finally, include the CMS Platform file:
+
+	include $site->baseDir('/external/cms/cms.inc.php');
+
+Don't forget to create your database and configure it in your Hummingbird instance, [click here](https://docs.vecode.net/hummingbird-v3/tutorials/database) for more details on that.
+
+Then, point your browser to your site url and you should be greeted by the Setup Wizard. Follow all the steps and you instance will be ready to rock.
 
 ## Credits
 
