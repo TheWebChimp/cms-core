@@ -12,10 +12,12 @@
 	include $site->baseDir('/external/cms/plugin.inc.php');
 	include $site->baseDir('/external/cms/xhr.inc.php');
 
-	include $site->baseDir('/external/cms/model/comment.model.php');
-	include $site->baseDir('/external/cms/model/entity.model.php');
-	include $site->baseDir('/external/cms/model/term.model.php');
-	include $site->baseDir('/external/cms/model/user.model.php');
+	if (class_exists('NORM') && class_exists('CROOD')) {
+		include $site->baseDir('/external/cms/model/comment.model.php');
+		include $site->baseDir('/external/cms/model/entity.model.php');
+		include $site->baseDir('/external/cms/model/term.model.php');
+		include $site->baseDir('/external/cms/model/user.model.php');
+	}
 
 	class CMS {
 
@@ -108,6 +110,11 @@
 			$cms = $site->cms;
 			$ret = false;
 			$cms->base_dir = dirname(__FILE__);
+			$installed = $cms->getOption('setup_installed', 0);
+			if (! $installed ) {
+				$site->redirectTo( $site->urlTo('/cms/utils/setup') );
+				exit;
+			}
 			$cms->recoverSession();
 			# Init plugins
 			foreach ($cms->plugins as $plugin) {
@@ -172,9 +179,12 @@
 		static function routeUtils($args) {
 			global $site;
 			$cms = $site->cms;
+			$dbh = $site->getDatabase();
 			$ret = false;
 			$cms->base_dir = dirname(__FILE__);
-			$cms->recoverSession();
+			if ($dbh) {
+				$cms->recoverSession();
+			}
 			#
 			$splat = get_item($args, 1);
 			$splat = explode('/', $splat);
@@ -194,6 +204,11 @@
 			$cms = $site->cms;
 			$ret = false;
 			$cms->base_dir = dirname(__FILE__);
+			$installed = $cms->getOption('setup_installed', 0);
+			if (! $installed ) {
+				$site->redirectTo( $site->urlTo('/cms/utils/setup') );
+				exit;
+			}
 			$cms->recoverSession();
 			# Init plugins
 			foreach ($cms->plugins as $plugin) {

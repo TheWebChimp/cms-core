@@ -11,6 +11,7 @@ html {
 
 	overflow-y: scroll;
 	font-size: 1em;
+	height: 100%;
 }
 
 body {
@@ -19,11 +20,9 @@ body {
 	font-family: 'Open Sans', Arial, Helvetica;
 	font-size: 14px;
 	color: #FFFFFF;
-	/* background-size */
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	min-height: 100%;
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
 }
 
 a {
@@ -40,7 +39,7 @@ a:hover {
 
 .inner {
 
-	width: 1000px;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -75,6 +74,35 @@ p {
 	margin: 0 0 15px;
 }
 
+ul {
+
+	margin-bottom: 15px;
+	list-style: outside disc;
+}
+
+ul li {
+
+	list-style: outside disc;
+	margin-left: 18px;
+}
+
+ul li:not(:last-child) {
+
+	margin-bottom: 7px;
+}
+
+ul.simple {
+
+	margin-bottom: 15px;
+	list-style: none;
+}
+
+ul.simple li {
+
+	list-style: none;
+	margin-left: 0;
+}
+
 h1, h2, h3, h4 {
 
 	font-weight: inherit;
@@ -86,6 +114,11 @@ h1 { font-size: 2.074em; }
 h2 { font-size: 1.728em; }
 h3 { font-size: 1.440em; }
 h4 { font-size: 1.200em; }
+
+code {
+
+	color: #009688;
+}
 
 .metabox {
 
@@ -129,6 +162,28 @@ h4 { font-size: 1.200em; }
 
 	margin-bottom: 0;
 }
+
+.led {
+
+	width: 13px;
+	height: 13px;
+	border-radius: 13px;
+	background: #323232;
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+.led.led-green  { background-color: #4CAF50; }
+.led.led-red    { background-color: #F44336; }
+.led.led-blue   { background-color: #2196F3; }
+.led.led-teal   { background-color: #009688; }
+.led.led-purple { background-color: #9C27B0; }
+.led.led-yellow { background-color: #FFEB3B; }
+.led.led-orange { background-color: #FF9800; }
+.led.led-white  { background-color: #FFFFFF; }
 
 .form-group {
 
@@ -243,9 +298,26 @@ h4 { font-size: 1.200em; }
 
 @media (min-width: 768px) {
 
+	body {
+
+		/* background-size */
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
 	.center-col {
 
 		width: 50%;
 		margin: 0 auto;
+	}
+}
+
+@media (min-width: 1024px) {
+
+	.inner {
+
+		width: 1000px;
 	}
 }
